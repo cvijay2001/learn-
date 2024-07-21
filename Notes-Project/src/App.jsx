@@ -13,6 +13,7 @@ function App() {
     // { "todo": 'Trip', "date": '6/11/24' },
     // { "todo": 'School Event', "date": '4/10/24' },
   ]
+  const my_var = "main edited"
 
   const [todovalue, todoset] = useState(todo_obj)
 
