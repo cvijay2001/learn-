@@ -4,6 +4,7 @@ import Todo_heading from "./component/Todo_heading";
 import Todo_data from "./component/Todo_data"
 import Card from "./component/Card"
 import { useState } from "react";
+import Learn from "./component/learn";
 
 
 function App() {
@@ -69,7 +70,7 @@ function App() {
 
   return (
     <>
-
+<Learn></Learn>
       <center>
         <Todo_heading></Todo_heading>
         <Todo todovalue={todovalue} todoset={todoset}></Todo>
