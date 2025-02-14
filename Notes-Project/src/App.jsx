@@ -2,9 +2,8 @@ import Del_btn from "./component/Action_btn"
 import Todo from "./component/Todo";
 import Todo_heading from "./component/Todo_heading";
 import Todo_data from "./component/Todo_data"
-import Card from "./component/Card"
 import { useState } from "react";
-import Learn from "./component/learn";
+import Img_card from "./component/Img_card";
 
 
 function App() {
@@ -70,36 +69,16 @@ function App() {
 
   return (
     <>
-<Learn></Learn>
+
       <center>
         <Todo_heading></Todo_heading>
         <Todo todovalue={todovalue} todoset={todoset}></Todo>
         <Todo_data todovalue={todovalue} todoset={todoset} ></Todo_data>
       </center>
 
-      <div className="container mt-5">
-        <div className="row">
+      <Img_card cardData={cardData}></Img_card>
 
-          {
-            cardData.map((data, index) => {
-              return (
-                <div className="col-sm-3" key={index}>
-                  <Card
-                    card_index = {index+1}
-                    title={data.title }
-                    image={data.image}
-                    footer={data.footer}
-                  >
-                    <p className="card-text">{data.content}</p>
-                    <a href="#" className="btn btn-primary">{data.button}</a>
-                  </Card>
-                </div>
-                
-              )
-            })
-          }
-        </div>
-      </div>
+      
     </>
   )
 }
